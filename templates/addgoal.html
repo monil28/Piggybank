@@ -1,0 +1,55 @@
+ <!DOCTYPE html>
+<head>
+    <title>INPUT FORM</title>
+    <style>
+        input{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        }
+</style>
+
+</head>
+<body>
+<center><h2>Add your Goals</h2></center><br>
+          <form method="post" action="/addgoal"><fieldset>
+          {% csrf_token %}
+              Goal: <input type="text" name="gname" placeholder="Enter your goal name"><br><br>
+              Description: <input type="text" id="lname" name="desc"><br>
+              <input type="submit" value="Submit">
+              <a href="/">Go Back To Dashboard</a>
+              </fieldset>
+        </form>
+</body>
+</html>
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+  <center><h2>Add Your Goals</h2></center>
+
+<form method="post" action="/addgoal">
+{% csrf_token %}
+  <label for="fname"><b>Goal</b></label>
+  <input type="text" id="fname" name="gname">
+  <label for="lname"><b>Goal Description</b></label>
+  <input type="text" id="lname" name="desc">
+  <input type="submit" value="submit"><br><br><br>
+  <a href="/">Go Back To Dashboard</a>
+</form>
+
+</body>
+</html>
+
+-->
